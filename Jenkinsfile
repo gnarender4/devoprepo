@@ -11,7 +11,7 @@ pipeline {
     stages {
         stage("Checkout from SCM") {
             steps {
-                git branch: 'main', credentialsId: 'github', url: 'https://github.com/gnarender4/devoprepo'
+                git branch: 'master', credentialsId: 'github', url: 'https://github.com/gnarender4/devoprepo'
             }
         }
 
