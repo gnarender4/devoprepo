@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.narender.jenkinsgradle1.JenkinsGradle1ApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-04-04T05:59:21" hostname="TOUCAN-L227" time="0.834">
+  <properties/>
+  <testcase name="contextLoads()" classname="com.narender.jenkinsgradle1.JenkinsGradle1ApplicationTests" time="0.834"/>
+  <system-out><![CDATA[11:29:19.689 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.narender.jenkinsgradle1.JenkinsGradle1ApplicationTests]: JenkinsGradle1ApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+11:29:19.822 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.narender.jenkinsgradle1.JenkinsGradle1Application for test class com.narender.jenkinsgradle1.JenkinsGradle1ApplicationTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.4)
+
+2024-04-04T11:29:20.237+05:30  INFO 17764 --- [JenkinsGradle1] [    Test worker] c.n.j.JenkinsGradle1ApplicationTests     : Starting JenkinsGradle1ApplicationTests using Java 17.0.9 with PID 17764 (started by Gude Narender in D:\Jekins Pocs\JenkinsGradle1)
+2024-04-04T11:29:20.238+05:30  INFO 17764 --- [JenkinsGradle1] [    Test worker] c.n.j.JenkinsGradle1ApplicationTests     : No active profile set, falling back to 1 default profile: "default"
+2024-04-04T11:29:21.536+05:30  INFO 17764 --- [JenkinsGradle1] [    Test worker] c.n.j.JenkinsGradle1ApplicationTests     : Started JenkinsGradle1ApplicationTests in 1.537 seconds (process running for 2.869)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
