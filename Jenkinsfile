@@ -3,54 +3,28 @@ pipeline {
         label 'Jenkins-Agent'
     }
 
+    tools {
+        jdk 'Java17'
+        maven 'Maven3'
+    }
+
     stages {
         stage("Checkout from SCM") {
             steps {
-                script {
-                    // Checkout the code from SCM
-                    checkout scm
-                }
+                git branch: 'master', credentialsId: 'github', url: 'https://github.com/gnarender4/devoprepo'
             }
         }
 
         stage("Build Application") {
             steps {
-                script {
-                    // Check if pom.xml file exists
-                    def pomExists = fileExists('pom.xml')
-
-                    // If pom.xml file exists, execute Maven build
-                    if (pomExists) {
-                        // Execute Maven build
-                        sh "mvn clean package"
-                    } else {
-                        // Print message indicating that pom.xml file was not found
-                        echo "Skipping Maven build. No pom.xml file found."
-                    }
-                }
+                sh "mvn clean package"
             }
         }
 
         stage("Test Application") {
             steps {
-                script {
-                    // Check if pom.xml file exists
-                    def pomExists = fileExists('pom.xml')
-
-                    // If pom.xml file exists, execute Maven test
-                    if (pomExists) {
-                        // Execute Maven test
-                        sh "mvn test"
-                    } else {
-                        // Print message indicating that pom.xml file was not found
-                        echo "Skipping Maven test. No pom.xml file found."
-                    }
-                }
+                sh "mvn test"
             }
         }
     }
-}
-
-def fileExists(String filename) {
-    return file(filename).exists()
 }
