@@ -1,6 +1,0 @@
-sum of two num by lambda ex
-lambda exp to check string is empty or not
-lamba exp to convert a list of string to upper and lower case
-lambda exp to filter even and odd num from list of integers
-lamba exp to find avg list of doubles
-
