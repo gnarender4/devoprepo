@@ -1,33 +1,30 @@
-pipeline{
-  agent { label 'Jenkins-Agent'}
-
-  tools {
-    jdk 'Java17'
-    maven 'Maven3'
-  }
-
-  stages {
-
-    stage("Checkout from SCM"){
-
-      steps{
-        git branch: 'main', credentialsId: 'github', url: 'https://github.com/gnarender4/devoprepo'
-      }
+pipeline {
+    agent {
+        label 'Jenkins-Agent'
     }
 
-    stage("Build Application"){
-      steps{
-        sh "mvn clean package"
-      }
+    tools {
+        jdk 'Java17'
+        maven 'Maven3'
     }
 
-    stage("Test Application"){
+    stages {
+        stage("Checkout from SCM") {
+            steps {
+                git branch: 'main', credentialsId: 'github', url: 'https://github.com/gnarender4/devoprepo'
+            }
+        }
 
-      steps{
-        sh "mvn test"
-      }
+        stage("Build Application") {
+            steps {
+                sh "mvn clean package"
+            }
+        }
+
+        stage("Test Application") {
+            steps {
+                sh "mvn test"
+            }
+        }
     }
-
-    
-  }
 }
